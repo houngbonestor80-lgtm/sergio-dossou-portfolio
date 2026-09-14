@@ -20,6 +20,9 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
   body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink-900);background:#fff;line-height:1.6}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
@@ -39,6 +42,7 @@
   .navlinks a{color:var(--ink-700);transition:color .2s}
   .navlinks a:hover{color:var(--brand-600)}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;font-weight:700;font-size:.85rem;transition:all .2s;border:1.5px solid transparent}
+  .btn:hover{transform:translateY(-2px)}
   .btn-primary{background:var(--brand-600);color:#fff}
   .btn-primary:hover{background:var(--brand-700)}
   .btn-ghost{border-color:var(--hair);color:var(--ink-900)}
@@ -73,13 +77,15 @@
   .alt{background:var(--surface-mist)}
 
   /* badge groups */
-  .tag{display:inline-flex;align-items:center;padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;margin:4px 6px 4px 0;border:1px solid var(--hair);background:#fff}
+  .tag{display:inline-flex;align-items:center;padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;margin:4px 6px 4px 0;border:1px solid var(--hair);background:#fff;transition:transform .2s ease,border-color .2s ease}
+  .tag:hover{transform:translateY(-2px);border-color:var(--brand-600)}
   .tag-group h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-700);margin:28px 0 12px}
   .tag-group:first-child h3{margin-top:0}
 
   /* Timeline */
   .timeline{position:relative;padding-left:28px;border-left:2px solid var(--brand-200)}
-  .tl-item{position:relative;margin-bottom:38px}
+  .tl-item{position:relative;margin-bottom:38px;transition:transform .25s ease}
+  .tl-item:hover{transform:translateX(6px)}
   .tl-item::before{content:'';position:absolute;left:-35px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--brand-600);border:3px solid #fff;box-shadow:0 0 0 2px var(--brand-200)}
   .tl-item .dates{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-700)}
   .tl-item h3{font-size:1.08rem;margin-top:4px;color:var(--ink-900)}
@@ -102,17 +108,9 @@
   .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
   @media (max-width:900px){.values-grid{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:520px){.values-grid{grid-template-columns:1fr}}
-  .value-card{background:var(--ink-50,#f6f7f9);border:1px solid var(--hair);border-radius:16px;padding:22px}
+  .value-card{background:var(--ink-50,#f6f7f9);border:1px solid var(--hair);border-radius:16px;padding:22px;transition:transform .25s ease,box-shadow .25s ease}
+  .value-card:hover{transform:translateY(-6px);box-shadow:0 16px 30px -12px rgba(22,28,31,.15)}
   .value-card .vicon{margin-bottom:12px;font-size:1.6rem;color:var(--brand-600)}
-
-  /* Team */
-  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-  @media (max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:520px){.team-grid{grid-template-columns:1fr}}
-  .team-card{background:#fff;border:1px solid var(--hair);border-radius:16px;padding:22px;text-align:center}
-  .team-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block}
-  .team-card h3{font-size:.95rem}
-  .team-card p{font-size:.82rem;color:var(--ink-500);margin-top:4px}
   .value-card h3{font-size:.98rem;margin-bottom:6px}
   .value-card p{font-size:.85rem;color:var(--ink-500)}
 
@@ -189,7 +187,7 @@
 </div>
 
 <section id="profil">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Profil</span>
     <h2>Manager de Transition HSE · Consultant Expert QHSE · Chef de Projets Risques Industriels</h2>
     <p class="lead">Manager de Transition HSE disponible pour des missions d'intérim de management (remplacement, renfort, structuration de la fonction HSE), Ingénieur Risques Industriels QHSE, fondateur d'IFECARM GROUP. Auditeur interne QSE Intégrée AFNOR, Directeur de projets Risques Industriels sites ICPE / SEVESO, QHSE Risk Manager &amp; Risk Manager ATEX CFPA Europe, DU 3<sup>e</sup> cycle Ergonomie, Santé &amp; Sécurité au Travail, Formateur SST et SSIAP 3. Mobilité nationale et internationale.</p>
@@ -251,7 +249,7 @@
 </section>
 
 <section class="alt">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Vision</span>
     <h2>Une vision pour l'Afrique industrielle</h2>
     <p class="lead">Convaincu que la sécurité industrielle est un levier de développement et non une contrainte, Sergio S. G. Dossou œuvre à faire émerger, sur le continent, une culture QHSE aussi exigeante que celle des standards européens — au service d'une industrialisation africaine sûre, durable et souveraine.</p>
@@ -264,7 +262,7 @@
 </section>
 
 <section id="parcours">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Parcours</span>
     <h2>Expérience professionnelle QHSE — 15+ années</h2>
     <p class="lead">Missions en management de transition et conseil senior, en parallèle de la direction d'IFECARM GROUP.</p>
@@ -337,7 +335,7 @@
 </section>
 
 <section id="expertise" class="alt">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Expertise</span>
     <h2>Domaines d'expertise &amp; qualifications</h2>
     <p class="lead">Domaines d'expertise : Air · Eau · Sol.</p>
@@ -371,7 +369,7 @@
 </section>
 
 <section id="formations">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Formations</span>
     <h2>Parcours académique</h2>
     <div class="grid-2">
@@ -390,7 +388,7 @@
 </section>
 
 <section id="presse" class="alt">
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Presse</span>
     <h2>En couverture</h2>
     <div class="press">
@@ -405,7 +403,7 @@
 </section>
 
 <section>
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Cabinet</span>
     <h2 style="margin-bottom:24px">IFECARM GROUP</h2>
     <div class="ifecarm-block">
@@ -432,24 +430,7 @@
 </section>
 
 <section class="alt">
-  <div class="wrap">
-    <span class="eyebrow">Équipe</span>
-    <h2>L'équipe IFECARM GROUP</h2>
-    <p class="lead">Une équipe pluridisciplinaire aux côtés de Sergio S. G. Dossou pour porter les missions QHSE en Afrique et en Europe.</p>
-    <div class="team-grid">
-      <div class="team-card"><img class="team-avatar" src="assets/team/tatiana-capo-chichi.jpg" alt="Tatiana Capo-Chichi"><h3>Tatiana Capo-Chichi</h3><p>Directrice Générale Afrique · Consulting Manager · Directrice Expertise-Conseils &amp; Audits</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/william-toihin.jpg" alt="William G. H. Toihin"><h3>William G. H. Toihin</h3><p>Directeur Ingénierie &amp; Formation · Ingénieur Électricité &amp; Énergie</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/kamelya-acka.jpg" alt="Kamelya Acka"><h3>Kamelya Acka</h3><p>Directrice Qualité, Stratégie &amp; Performance</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/belkais-drareni.jpeg" alt="Belkais Drareni"><h3>Belkais Drareni</h3><p>Directrice Stratégie · Système qualité, KPI &amp; amélioration continue</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/meriadeck-amoussou.jpg" alt="Mériadeck Amoussou"><h3>Mériadeck Amoussou</h3><p>Directeur Communication &amp; Marketing Digital / E-Commerce</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/nassiratou-salifou.jpg" alt="Nassiratou Salifou"><h3>Nassiratou Salifou</h3><p>Chargée de Projets Junior, Environnement Durable</p></div>
-      <div class="team-card"><img class="team-avatar" src="assets/team/juliette-amoussou.jpg" alt="Juliette Amoussouvi"><h3>Juliette Amoussouvi</h3><p>Secrétaire Administrative &amp; Pédagogique · Référente RSE</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
+  <div class="wrap reveal">
     <span class="eyebrow">Nos engagements</span>
     <h2>Nos engagements au quotidien</h2>
     <p class="lead">Huit principes guident nos décisions, nos collaborations et la qualité de nos interventions.</p>
@@ -466,8 +447,8 @@
   </div>
 </section>
 
-<section id="rdv" class="alt">
-  <div class="wrap">
+<section id="rdv">
+  <div class="wrap reveal">
     <span class="eyebrow">Rendez-vous</span>
     <h2>Planifier un échange</h2>
     <p class="lead">Choisissez un créneau directement dans l'agenda ci-dessous.</p>
@@ -501,5 +482,11 @@
   <div class="copy">© 2026 Sergio S. G. DOSSOU — Fondateur &amp; CEO, IFECARM GROUP SARL</div>
 </footer>
 
+<script>
+  const io = new IntersectionObserver(entries => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>
