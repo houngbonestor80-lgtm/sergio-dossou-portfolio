@@ -35,6 +35,8 @@
 
   /* Nav */
   header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+  .scroll-progress{position:absolute;top:0;left:0;height:2.5px;width:0%;background:var(--brand-600);transition:width .1s linear}
+  .navlinks a.active{color:var(--brand-600)}
   .navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
   .navbar .name{font-weight:800;font-size:1rem}
   .navbar .name span{color:var(--brand-600)}
@@ -84,7 +86,7 @@
 
   /* Timeline */
   .timeline{position:relative;padding-left:28px;border-left:2px solid var(--brand-200)}
-  .tl-item{position:relative;margin-bottom:38px;transition:transform .25s ease}
+  .tl-item{position:relative;margin-bottom:38px;transition:transform .25s ease,opacity .6s ease}
   .tl-item:hover{transform:translateX(6px)}
   .tl-item::before{content:'';position:absolute;left:-35px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--brand-600);border:3px solid #fff;box-shadow:0 0 0 2px var(--brand-200)}
   .tl-item .dates{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-700)}
@@ -108,7 +110,7 @@
   .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
   @media (max-width:900px){.values-grid{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:520px){.values-grid{grid-template-columns:1fr}}
-  .value-card{background:var(--ink-50,#f6f7f9);border:1px solid var(--hair);border-radius:16px;padding:22px;transition:transform .25s ease,box-shadow .25s ease}
+  .value-card{background:var(--ink-50,#f6f7f9);border:1px solid var(--hair);border-radius:16px;padding:22px;transition:transform .25s ease,box-shadow .25s ease,opacity .6s ease}
   .value-card:hover{transform:translateY(-6px);box-shadow:0 16px 30px -12px rgba(22,28,31,.15)}
   .value-card .vicon{margin-bottom:12px;font-size:1.6rem;color:var(--brand-600)}
   .value-card h3{font-size:.98rem;margin-bottom:6px}
@@ -139,6 +141,7 @@
 <body>
 
 <header class="site">
+  <div class="scroll-progress"></div>
   <nav class="navbar">
     <a href="#hero" class="name">Sergio <span>DOSSOU</span></a>
     <div class="navlinks">
@@ -179,9 +182,9 @@
 
 <div class="stats">
   <div class="wrap stats-grid">
-    <div><b>15+</b><span>Ans d'expérience QHSE</span></div>
-    <div><b>5</b><span>Grands groupes industriels</span></div>
-    <div><b>2022</b><span>Fondation d'IFECARM GROUP</span></div>
+    <div><b data-count="15" data-suffix="+">0</b><span>Ans d'expérience QHSE</span></div>
+    <div><b data-count="5">0</b><span>Grands groupes industriels</span></div>
+    <div><b data-count="2022">0</b><span>Fondation d'IFECARM GROUP</span></div>
     <div><b>ICPE</b><span>Sites SEVESO &amp; ERP/ERT</span></div>
   </div>
 </div>
@@ -254,9 +257,9 @@
     <h2>Une vision pour l'Afrique industrielle</h2>
     <p class="lead">Convaincu que la sécurité industrielle est un levier de développement et non une contrainte, Sergio S. G. Dossou œuvre à faire émerger, sur le continent, une culture QHSE aussi exigeante que celle des standards européens — au service d'une industrialisation africaine sûre, durable et souveraine.</p>
     <div class="values-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="value-card"><div class="vicon"><i class="bi bi-shield-check"></i></div><h3>Ancrer une culture sécurité locale</h3><p>Faire de la prévention des risques industriels un réflexe partagé, à tous les niveaux hiérarchiques des organisations africaines.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-people-fill"></i></div><h3>Transférer la compétence</h3><p>Former une nouvelle génération d'ingénieurs et de référents HSE africains, autonomes sur les référentiels internationaux.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-patch-check-fill"></i></div><h3>Aligner sur les standards internationaux</h3><p>Amener les sites ICPE/SEVESO et industries à risque africains au niveau des certifications ISO et exigences réglementaires mondiales.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-shield-check"></i></div><h3>Ancrer une culture sécurité locale</h3><p>Faire de la prévention des risques industriels un réflexe partagé, à tous les niveaux hiérarchiques des organisations africaines.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-people-fill"></i></div><h3>Transférer la compétence</h3><p>Former une nouvelle génération d'ingénieurs et de référents HSE africains, autonomes sur les référentiels internationaux.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-patch-check-fill"></i></div><h3>Aligner sur les standards internationaux</h3><p>Amener les sites ICPE/SEVESO et industries à risque africains au niveau des certifications ISO et exigences réglementaires mondiales.</p></div>
     </div>
   </div>
 </section>
@@ -268,7 +271,7 @@
     <p class="lead">Missions en management de transition et conseil senior, en parallèle de la direction d'IFECARM GROUP.</p>
 
     <div class="timeline">
-      <div class="tl-item current">
+      <div class="tl-item current reveal">
         <div class="dates">Depuis Mai 2022</div>
         <h3>CEO &amp; Founder — IFECARM GROUP SARL</h3>
         <div class="org">Afrique &amp; Europe · www.ifecarm-qhse.com</div>
@@ -278,7 +281,7 @@
           <li>Conformité réglementaire, stratégie de performance industrielle, innovation (IA &amp; logiciels QHSE) et externalisation de départements QHSE.</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item reveal">
         <div class="dates">Mars 2024 – Février 2026</div>
         <h3>Responsable Service Environnement &amp; Risques industriels — Manager de Transition (Freelance)</h3>
         <div class="org">YARA Europe, Montoir-de-Bretagne · Site ICPE SEVESO Seuil Haut, &gt;350 salariés · Mission Arthur Hunt Transition</div>
@@ -289,7 +292,7 @@
           <li>Suivi du projet de remédiation réseaux &amp; centrale incendie et du projet phyto-épuration (&gt;5 M€).</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item reveal">
         <div class="dates">Juin 2022 – Janvier 2024</div>
         <h3>Consultant Sénior, Chef de Projets QHSE Risques industriels (Freelance)</h3>
         <div class="org">SANOFI, Val de Reuil · Site ICPE (IED) soumis à Autorisation, &gt;4500 salariés</div>
@@ -299,7 +302,7 @@
           <li>Création des fiches de vie MMRI, POI et plan de continuité d'activité ; stratégie d'évacuation et de confinement.</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item reveal">
         <div class="dates">Mai 2019 – Juin 2022</div>
         <h3>Ingénieur Régional en Chef QHSE Risques Industriels</h3>
         <div class="org">Société Française Donges Metz (Bolloré Energy) · Site ICPE SEVESO Haut · Coordination multisites &gt;250 salariés</div>
@@ -309,7 +312,7 @@
           <li>Audits ISO 14001/50001, formation HSE &amp; CATEC, gestion de la coactivité et interface avec les autorités externes.</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item reveal">
         <div class="dates">Juin 2017 – Décembre 2018</div>
         <h3>Ingénieur SSE &amp; Expert Incendie Site</h3>
         <div class="org">SAFRAN Nacelles, Le Havre · Site ICPE &gt;1600 salariés</div>
@@ -319,7 +322,7 @@
           <li>Management SSE des unités de production : accidents, ergonomie, risques chimiques et procédures d'urgence PUI/PPAM.</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item reveal">
         <div class="dates">Mai 2013 – Juin 2017</div>
         <h3>Ingénieur / Assistant Directeur QHSE France</h3>
         <div class="org">HOWMET Castings — Arconic Power &amp; Propulsion (Aerospace), ex-Alcoa · Site ICPE &gt;1400 salariés</div>
@@ -435,14 +438,14 @@
     <h2>Nos engagements au quotidien</h2>
     <p class="lead">Huit principes guident nos décisions, nos collaborations et la qualité de nos interventions.</p>
     <div class="values-grid">
-      <div class="value-card"><div class="vicon"><i class="bi bi-briefcase-fill"></i></div><h3>Professionnalisme</h3><p>Un standard qui ne varie pas selon la taille du client.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-award-fill"></i></div><h3>Leadership</h3><p>Montrer l'exemple avant de l'exiger.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-check2-square"></i></div><h3>Rigueur</h3><p>Vérifier deux fois ce qui ne doit être juste qu'une fois.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-fire"></i></div><h3>Passion</h3><p>Le métier qu'on choisirait encore.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-shield-fill-check"></i></div><h3>Intégrité</h3><p>Rester honnête quand un raccourci serait plus simple.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-lightbulb-fill"></i></div><h3>Innovation</h3><p>Chercher mieux, pas seulement différent.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-check-circle-fill"></i></div><h3>Responsabilité</h3><p>Répondre de nos actes, pas seulement de nos intentions.</p></div>
-      <div class="value-card"><div class="vicon"><i class="bi bi-emoji-smile-fill"></i></div><h3>Satisfaction client</h3><p>Écouter avant de proposer.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-briefcase-fill"></i></div><h3>Professionnalisme</h3><p>Un standard qui ne varie pas selon la taille du client.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-award-fill"></i></div><h3>Leadership</h3><p>Montrer l'exemple avant de l'exiger.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-check2-square"></i></div><h3>Rigueur</h3><p>Vérifier deux fois ce qui ne doit être juste qu'une fois.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-fire"></i></div><h3>Passion</h3><p>Le métier qu'on choisirait encore.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-shield-fill-check"></i></div><h3>Intégrité</h3><p>Rester honnête quand un raccourci serait plus simple.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-lightbulb-fill"></i></div><h3>Innovation</h3><p>Chercher mieux, pas seulement différent.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-check-circle-fill"></i></div><h3>Responsabilité</h3><p>Répondre de nos actes, pas seulement de nos intentions.</p></div>
+      <div class="value-card reveal"><div class="vicon"><i class="bi bi-emoji-smile-fill"></i></div><h3>Satisfaction client</h3><p>Écouter avant de proposer.</p></div>
     </div>
   </div>
 </section>
@@ -484,9 +487,54 @@
 
 <script>
   const io = new IntersectionObserver(entries => {
-    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      const el = e.target;
+      const group = el.closest('.timeline, .values-grid');
+      const delay = group ? Array.from(group.children).indexOf(el) * 100 : 0;
+      setTimeout(() => el.classList.add('visible'), delay);
+      io.unobserve(el);
+    }
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const countIo = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      const el = e.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1200;
+      const start = performance.now();
+      const step = now => {
+        const p = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + suffix;
+        if (p < 1) requestAnimationFrame(step); else el.textContent = target + suffix;
+      };
+      requestAnimationFrame(step);
+      countIo.unobserve(el);
+    }
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => countIo.observe(el));
+
+  const progressBar = document.querySelector('.scroll-progress');
+  addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progressBar.style.width = pct + '%';
+  }, { passive: true });
+
+  const navLinks = document.querySelectorAll('.navlinks a[href^="#"]');
+  const spyIo = new IntersectionObserver(entries => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+    }
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  navLinks.forEach(a => {
+    const section = document.querySelector(a.getAttribute('href'));
+    if (section) spyIo.observe(section);
+  });
 </script>
 </body>
 </html>
