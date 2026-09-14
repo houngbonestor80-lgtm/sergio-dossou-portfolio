@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sergio S. G. DOSSOU — Manager de Transition HSE · CEO IFECARM GROUP</title>
+<meta name="description" content="Portfolio professionnel de Sergio S. G. DOSSOU, Manager de Transition HSE, Ingénieur QHSE Risk Manager, Directeur de projets Risques Industriels (ICPE/SEVESO) et Fondateur & CEO d'IFECARM GROUP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  :root{
+    --brand-50:#f2f8f4; --brand-100:#e0efe4; --brand-200:#c2e0cd; --brand-300:#95c8aa;
+    --brand-400:#64a980; --brand-500:#428d61; --brand-600:#2d7a44; --brand-700:#266139;
+    --brand-800:#214e2f; --brand-900:#1e4d2e;
+    --ink-500:#52646c; --ink-700:#313b40; --ink-900:#161c1f;
+    --qhse-orange:#E39C2A; --qhse-blue:#4A86A8; --qhse-red:#C6362C; --qhse-green:#2D7A44;
+    --surface-mist:#F5F7F8; --ivory:#F6F5F1; --hair:rgba(22,28,31,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink-900);background:#fff;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  h1,h2,h3{font-weight:800;letter-spacing:-0.01em}
+  h2{font-size:clamp(1.6rem,3vw,2.1rem);color:var(--ink-900);margin-bottom:8px}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-700)}
+  .lead{color:var(--ink-500);max-width:640px;margin-top:10px;margin-bottom:44px;font-size:1.02rem}
+
+  /* Nav */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+  .navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto}
+  .navbar .name{font-weight:800;font-size:1rem}
+  .navbar .name span{color:var(--brand-600)}
+  .navlinks{display:flex;gap:26px;font-size:.85rem;font-weight:600}
+  .navlinks a{color:var(--ink-700);transition:color .2s}
+  .navlinks a:hover{color:var(--brand-600)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;font-weight:700;font-size:.85rem;transition:all .2s;border:1.5px solid transparent}
+  .btn-primary{background:var(--brand-600);color:#fff}
+  .btn-primary:hover{background:var(--brand-700)}
+  .btn-ghost{border-color:var(--hair);color:var(--ink-900)}
+  .btn-ghost:hover{border-color:var(--brand-600);color:var(--brand-700)}
+  .btn-light{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-light:hover{background:rgba(255,255,255,.28)}
+  @media (max-width:760px){.navlinks{display:none}}
+
+  /* Hero */
+  .hero{background:linear-gradient(125deg,var(--ink-900) 0%, var(--brand-900) 130%);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+  .hero::after{content:'';position:absolute;right:-6%;top:50%;transform:translateY(-50%);width:420px;height:420px;background:url('assets/logo_ring_ifecarm.png') center/contain no-repeat;opacity:.08;pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+  .hero-photo{width:220px;height:220px;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px -10px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.15)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.14);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+  .hero h1{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.1}
+  .hero .role{color:var(--brand-300);font-weight:600;margin-top:8px;font-size:1.05rem}
+  .hero .tagline{color:rgba(255,255,255,.75);margin-top:14px;max-width:560px;font-size:.98rem}
+  .hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .contact-chips{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:.85rem;color:rgba(255,255,255,.8)}
+  .contact-chips span{display:inline-flex;align-items:center;gap:7px}
+  @media (max-width:700px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-photo{margin:0 auto;width:160px;height:160px}.hero-actions,.contact-chips{justify-content:center}}
+
+  /* Stats */
+  .stats{background:var(--brand-900);color:#fff;padding:40px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .stats-grid b{display:block;font-size:1.9rem;color:var(--brand-300);font-weight:800}
+  .stats-grid span{font-size:.78rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.04em}
+  @media (max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Sections alt */
+  .alt{background:var(--surface-mist)}
+
+  /* badge groups */
+  .tag{display:inline-flex;align-items:center;padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;margin:4px 6px 4px 0;border:1px solid var(--hair);background:#fff}
+  .tag-group h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-700);margin:28px 0 12px}
+  .tag-group:first-child h3{margin-top:0}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:28px;border-left:2px solid var(--brand-200)}
+  .tl-item{position:relative;margin-bottom:38px}
+  .tl-item::before{content:'';position:absolute;left:-35px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--brand-600);border:3px solid #fff;box-shadow:0 0 0 2px var(--brand-200)}
+  .tl-item .dates{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--brand-700)}
+  .tl-item h3{font-size:1.08rem;margin-top:4px;color:var(--ink-900)}
+  .tl-item .org{font-weight:600;color:var(--ink-500);font-size:.92rem;margin-top:1px}
+  .tl-item ul{margin:12px 0 0 0;padding-left:18px;color:var(--ink-700);font-size:.92rem}
+  .tl-item li{margin-bottom:5px}
+  .tl-item.current::before{background:var(--qhse-orange);box-shadow:0 0 0 2px #fbe4bb}
+
+  /* Cards grid (formations, domaines) */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media (max-width:760px){.grid-2{grid-template-columns:1fr}}
+  .edu-item{border-left:3px solid var(--brand-600);padding-left:16px;margin-bottom:18px}
+  .edu-item .yr{font-weight:700;color:var(--brand-700);font-size:.85rem}
+  .edu-item p{font-size:.92rem;color:var(--ink-700);margin-top:2px}
+  .qual-list{list-style:none}
+  .qual-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:11px;font-size:.92rem;color:var(--ink-700)}
+  .qual-list li::before{content:'✓';color:var(--brand-600);font-weight:800;flex-shrink:0}
+
+  /* Values */
+  .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+  @media (max-width:900px){.values-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.values-grid{grid-template-columns:1fr}}
+  .value-card{background:var(--ink-50,#f6f7f9);border:1px solid var(--hair);border-radius:16px;padding:22px}
+  .value-card .vicon{margin-bottom:12px;font-size:1.6rem;color:var(--brand-600)}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
+  @media (max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.team-grid{grid-template-columns:1fr}}
+  .team-card{background:#fff;border:1px solid var(--hair);border-radius:16px;padding:22px;text-align:center}
+  .team-avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block}
+  .team-card h3{font-size:.95rem}
+  .team-card p{font-size:.82rem;color:var(--ink-500);margin-top:4px}
+  .value-card h3{font-size:.98rem;margin-bottom:6px}
+  .value-card p{font-size:.85rem;color:var(--ink-500)}
+
+  /* Press */
+  .press{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:center;background:var(--ink-900);color:#fff;border-radius:20px;padding:32px}
+  .press img{border-radius:12px;box-shadow:0 15px 40px -10px rgba(0,0,0,.5)}
+  .press h3{font-size:1.15rem;margin-bottom:8px}
+  .press p{color:rgba(255,255,255,.72);font-size:.9rem;margin-bottom:16px}
+  @media (max-width:700px){.press{grid-template-columns:1fr;text-align:center}.press img{margin:0 auto;max-width:140px}}
+
+  /* Ifecarm block */
+  .ifecarm-block{display:flex;gap:24px;align-items:center;background:#fff;border:1px solid var(--hair);border-radius:20px;padding:28px 32px}
+  .ifecarm-block img{width:64px;height:64px;object-fit:contain}
+  .ifecarm-block h3{font-size:1.05rem}
+  .ifecarm-block p{color:var(--ink-500);font-size:.9rem;margin-top:6px}
+  @media (max-width:700px){.ifecarm-block{flex-direction:column;text-align:center}}
+
+  footer{background:var(--ink-900);color:rgba(255,255,255,.7);padding:48px 0 28px;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  footer a:hover{color:var(--brand-300)}
+  footer a{display:inline-flex;align-items:center;gap:7px}
+  .ficon{font-size:.9rem}
+  .copy{text-align:center;color:rgba(255,255,255,.4);font-size:.78rem;margin-top:36px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="navbar">
+    <a href="#hero" class="name">Sergio <span>DOSSOU</span></a>
+    <div class="navlinks">
+      <a href="#profil">Profil</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#formations">Formations</a>
+      <a href="#presse">Presse</a>
+      <a href="#rdv">Rendez-vous</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-primary" href="assets/CV-Sergio-DOSSOU.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-photo"><img src="assets/sergio-dossou.avif" alt="Sergio S. G. DOSSOU"></div>
+    <div>
+      <span class="badge">Manager de Transition HSE · CEO &amp; Founder IFECARM GROUP</span>
+      <h1>Ing. Sr. Sergio S. G. DOSSOU</h1>
+      <p class="role">Manager de Transition HSE &amp; Directeur de projets Risques Industriels — Sites ICPE / SEVESO</p>
+      <p class="tagline">Plus de 15 ans d'expérience QHSE auprès de grands groupes industriels (Sanofi, Yara, Safran, Howmet/Arconic, Bolloré Energy). Ingénieur diplômé de Polytech Angers, Auditeur ICA QSE Intégré AFNOR, Manager Risque ATEX (CFPA Europe/CNPP).</p>
+      <div class="contact-chips">
+        <span><i class="ficon bi bi-geo-alt-fill"></i> Afrique · Europe (résidence France)</span>
+        <span><i class="ficon bi bi-telephone-fill"></i> (+229) 01 91 32 24 70</span>
+        <span><i class="ficon bi bi-envelope-fill"></i> dossousergio@yahoo.fr</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/sergio-dossou-91319883/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-light" href="assets/CV-Sergio-DOSSOU.pdf" target="_blank" rel="noopener">Télécharger le CV</a>
+        <a class="btn btn-light" href="mailto:dossousergio@yahoo.fr">Contacter</a>
+        <a class="btn btn-light" href="#rdv">Prendre RDV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div><b>15+</b><span>Ans d'expérience QHSE</span></div>
+    <div><b>5</b><span>Grands groupes industriels</span></div>
+    <div><b>2022</b><span>Fondation d'IFECARM GROUP</span></div>
+    <div><b>ICPE</b><span>Sites SEVESO &amp; ERP/ERT</span></div>
+  </div>
+</div>
+
+<section id="profil">
+  <div class="wrap">
+    <span class="eyebrow">Profil</span>
+    <h2>Manager de Transition HSE · Consultant Expert QHSE · Chef de Projets Risques Industriels</h2>
+    <p class="lead">Manager de Transition HSE disponible pour des missions d'intérim de management (remplacement, renfort, structuration de la fonction HSE), Ingénieur Risques Industriels QHSE, fondateur d'IFECARM GROUP. Auditeur interne QSE Intégrée AFNOR, Directeur de projets Risques Industriels sites ICPE / SEVESO, QHSE Risk Manager &amp; Risk Manager ATEX CFPA Europe, DU 3<sup>e</sup> cycle Ergonomie, Santé &amp; Sécurité au Travail, Formateur SST et SSIAP 3. Mobilité nationale et internationale.</p>
+
+    <div class="grid-2">
+      <div>
+        <div class="tag-group">
+          <h3>Compétences métiers</h3>
+          <span class="tag">Systèmes de management SSE / SGS</span>
+          <span class="tag">Maîtrise des Risques IPRP</span>
+          <span class="tag">DRPCE · DDAE · EDD · PAC</span>
+          <span class="tag">ICPE · HAZOP · HAZID</span>
+          <span class="tag">Réglementation ADR · CLP/REACH · ATEX</span>
+          <span class="tag">Gestion de crise POI/PPI/PPRT</span>
+          <span class="tag">Normes ISO 9001/14001/45001/50001</span>
+        </div>
+        <div class="tag-group">
+          <h3>Qualifications ISO — Auditeur ICA QSE Intégré AFNOR</h3>
+          <span class="tag">ISO 9001 — Management Qualité</span>
+          <span class="tag">ISO 14001 — Management Environnemental</span>
+          <span class="tag">ISO 45001 — Santé &amp; Sécurité au Travail</span>
+          <span class="tag">ISO 50001 — Management de l'Énergie</span>
+          <span class="tag">ISO 22000 — Sécurité des Denrées Alimentaires</span>
+        </div>
+        <div class="tag-group">
+          <h3>Outils de gestion</h3>
+          <span class="tag">AMDEC</span><span class="tag">5S · 8D · PDCA</span><span class="tag">QRQC · KAIZEN</span>
+          <span class="tag">Ms Project</span><span class="tag">GMAO (KPI)</span><span class="tag">APSAD · EVAREX · GEREP</span>
+        </div>
+      </div>
+      <div>
+        <div class="tag-group">
+          <h3>Qualités humaines</h3>
+          <span class="tag">Adaptabilité &amp; autonomie</span>
+          <span class="tag">Pédagogie &amp; formation</span>
+          <span class="tag">Esprit d'analyse &amp; rigueur</span>
+          <span class="tag">Conduite du changement</span>
+          <span class="tag">Créativité &amp; management d'équipes</span>
+          <span class="tag">Leadership &amp; communication positive</span>
+        </div>
+        <div class="tag-group">
+          <h3>Langues &amp; informatique</h3>
+          <span class="tag">Français — soutenu</span>
+          <span class="tag">Anglais — opérationnel B1</span>
+          <span class="tag">Certifié TOSA Pack Office</span>
+          <span class="tag">Gant · Médi@lert · SAP</span>
+          <span class="tag">FullMark · TENNAXIA</span>
+        </div>
+        <div class="tag-group">
+          <h3>Engagements &amp; centres d'intérêt</h3>
+          <span class="tag">Scoutisme · ADEVA Bénin</span>
+          <span class="tag">Lutte contre le cancer au Bénin</span>
+          <span class="tag">Basket · natation · marche</span>
+          <span class="tag">Voyages internationaux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Vision</span>
+    <h2>Une vision pour l'Afrique industrielle</h2>
+    <p class="lead">Convaincu que la sécurité industrielle est un levier de développement et non une contrainte, Sergio S. G. Dossou œuvre à faire émerger, sur le continent, une culture QHSE aussi exigeante que celle des standards européens — au service d'une industrialisation africaine sûre, durable et souveraine.</p>
+    <div class="values-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="value-card"><div class="vicon"><i class="bi bi-shield-check"></i></div><h3>Ancrer une culture sécurité locale</h3><p>Faire de la prévention des risques industriels un réflexe partagé, à tous les niveaux hiérarchiques des organisations africaines.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-people-fill"></i></div><h3>Transférer la compétence</h3><p>Former une nouvelle génération d'ingénieurs et de référents HSE africains, autonomes sur les référentiels internationaux.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-patch-check-fill"></i></div><h3>Aligner sur les standards internationaux</h3><p>Amener les sites ICPE/SEVESO et industries à risque africains au niveau des certifications ISO et exigences réglementaires mondiales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <span class="eyebrow">Parcours</span>
+    <h2>Expérience professionnelle QHSE — 15+ années</h2>
+    <p class="lead">Missions en management de transition et conseil senior, en parallèle de la direction d'IFECARM GROUP.</p>
+
+    <div class="timeline">
+      <div class="tl-item current">
+        <div class="dates">Depuis Mai 2022</div>
+        <h3>CEO &amp; Founder — IFECARM GROUP SARL</h3>
+        <div class="org">Afrique &amp; Europe · www.ifecarm-qhse.com</div>
+        <ul>
+          <li>Cabinet de consulting international : gestion des risques, ingénierie, formation, expertise-conseils, ergonomie et audits QHSE.</li>
+          <li>Études techniques, audits, missions de bureau d'études et de contrôle, faisabilité et avant-projets industriels.</li>
+          <li>Conformité réglementaire, stratégie de performance industrielle, innovation (IA &amp; logiciels QHSE) et externalisation de départements QHSE.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="dates">Mars 2024 – Février 2026</div>
+        <h3>Responsable Service Environnement &amp; Risques industriels — Manager de Transition (Freelance)</h3>
+        <div class="org">YARA Europe, Montoir-de-Bretagne · Site ICPE SEVESO Seuil Haut, &gt;350 salariés · Mission Arthur Hunt Transition</div>
+        <ul>
+          <li>Assistance IPRP, expertises ICPE/QHSE et pilotage des dossiers PAC / notifications ICPE.</li>
+          <li>Management de transition : DRPCE, HAZOP, EDD, DUERP, garanties financières, déclaration de cessation et nouvelles autorisations DDAE.</li>
+          <li>Pilotage des déclarations DREAL, analyses PFAS, SEQE-UE et PMS ; suivi des MMR et des conformités aux arrêtés préfectoraux.</li>
+          <li>Suivi du projet de remédiation réseaux &amp; centrale incendie et du projet phyto-épuration (&gt;5 M€).</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="dates">Juin 2022 – Janvier 2024</div>
+        <h3>Consultant Sénior, Chef de Projets QHSE Risques industriels (Freelance)</h3>
+        <div class="org">SANOFI, Val de Reuil · Site ICPE (IED) soumis à Autorisation, &gt;4500 salariés</div>
+        <ul>
+          <li>Plan de remédiation ICPE 1510 : calculs D9/D9A, études de dangers, référent ATEX/ICPE.</li>
+          <li>Modélisation des fumées avec Flumilog, étude de vulnérabilité incendie, BREF/MTD et réexamen IED.</li>
+          <li>Création des fiches de vie MMRI, POI et plan de continuité d'activité ; stratégie d'évacuation et de confinement.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="dates">Mai 2019 – Juin 2022</div>
+        <h3>Ingénieur Régional en Chef QHSE Risques Industriels</h3>
+        <div class="org">Société Française Donges Metz (Bolloré Energy) · Site ICPE SEVESO Haut · Coordination multisites &gt;250 salariés</div>
+        <ul>
+          <li>Création et pilotage de l'outil d'analyse environnementale (AES) et du SMSSEE (KPI Groupe).</li>
+          <li>Études de dangers, bruit/foudre, DRPCE, dépollution, POI et exercices avec le SDIS en qualité de référent DOI.</li>
+          <li>Audits ISO 14001/50001, formation HSE &amp; CATEC, gestion de la coactivité et interface avec les autorités externes.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="dates">Juin 2017 – Décembre 2018</div>
+        <h3>Ingénieur SSE &amp; Expert Incendie Site</h3>
+        <div class="org">SAFRAN Nacelles, Le Havre · Site ICPE &gt;1600 salariés</div>
+        <ul>
+          <li>Déploiement du référentiel Groupe Standards SSE, veille réglementaire, ISO 14001/50001 et pilotage des KPI.</li>
+          <li>Garanties financières, étude de vulnérabilité incendie, calculs D9/D9A, Flumilog et déclarations GEREP.</li>
+          <li>Management SSE des unités de production : accidents, ergonomie, risques chimiques et procédures d'urgence PUI/PPAM.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="dates">Mai 2013 – Juin 2017</div>
+        <h3>Ingénieur / Assistant Directeur QHSE France</h3>
+        <div class="org">HOWMET Castings — Arconic Power &amp; Propulsion (Aerospace), ex-Alcoa · Site ICPE &gt;1400 salariés</div>
+        <ul>
+          <li>Coordination d'équipes multisites, document unique &amp; KPI Groupe, accompagnement à la certification ISO &amp; MASE.</li>
+          <li>Études de dangers, modélisations Flumilog, DRPCE, calculs D9/D9A et études de vulnérabilité incendie.</li>
+          <li>Projets industriels de dépollution et de construction/déconstruction, conformité des machines et gestion de la coactivité.</li>
+          <li>Expertise environnementale (amiante/DTA, PFAS, SEQE, BREF/MTD), audits ISO/MASE, RSE et qualité de vie au travail.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Expertise</span>
+    <h2>Domaines d'expertise &amp; qualifications</h2>
+    <p class="lead">Domaines d'expertise : Air · Eau · Sol.</p>
+    <div class="grid-2">
+      <div>
+        <h3 style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-700);margin-bottom:14px">Qualifications &amp; habilitations</h3>
+        <ul class="qual-list">
+          <li>Auditeur interne QSE Intégrée AFNOR</li>
+          <li>Directeur de projets Risques Industriels — Sites ICPE / SEVESO</li>
+          <li>QHSE Risk Manager &amp; Risk Manager ATEX (CFPA Europe / CNPP) — Explosion Protection Manager</li>
+          <li>DU 3<sup>e</sup> cycle Ergonomie, Santé &amp; Sécurité au Travail (Bac+6, Université d'Angers)</li>
+          <li>Formateur SST et SSIAP 3</li>
+          <li>SCN1 – N2 – H0-H0V/B0/BEM · BOSIET/HUET · Travail en hauteur (harnais) · APC Ex GESIP</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-700);margin-bottom:14px">Analyse &amp; gestion des risques</h3>
+        <ul class="qual-list">
+          <li>Audits normatifs ISO / internes Groupe : sécurité, qualité, accompagnement certification ISO &amp; MASE</li>
+          <li>Études de dangers (EDD), modélisations Flumilog, calculs D9/D9A</li>
+          <li>Expertise environnementale : amiante, garanties financières, PFAS, SEQE, réexamen BREF/MTD</li>
+          <li>Prévention environnementale et professionnelle : air, eau, sol, bruit, foudre, COV, RSE et bilan carbone</li>
+          <li>Ergonomie, qualité de vie au travail et prévention des risques psychosociaux (QVT/RPS)</li>
+          <li>Sécurité incendie ERP/ERT, espaces confinés CATEC et maîtrise de la coactivité</li>
+          <li>Gestion de crise &amp; plans de secours : POI, PPI, PPAM, PPRT, PCA, plan sûreté portuaire</li>
+          <li>Sûreté d'exploitation (Process Safety) : HAZOP (PID), SILS, MMR, PMS et gestion des modifications</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formations">
+  <div class="wrap">
+    <span class="eyebrow">Formations</span>
+    <h2>Parcours académique</h2>
+    <div class="grid-2">
+      <div>
+        <div class="edu-item"><div class="yr">2021</div><p>Explosion Protection Manager (CFPA Europe) – Référent Risques ATEX (CNPP)</p></div>
+        <div class="edu-item"><div class="yr">2015</div><p>DU 3<sup>e</sup> cycle Ergonomie, Santé &amp; Sécurité au Travail (Bac+6) — Université d'Angers (UFR Sciences Médicales)</p></div>
+        <div class="edu-item"><div class="yr">2015</div><p>Master 2 GRESPII — Gestion des Risques Et de la Sécurité des Patrimoines Immobiliers &amp; Industriels : Ingénieur QHSE (Bac+5) — Polytech d'Angers (ISTIA)</p></div>
+      </div>
+      <div>
+        <div class="edu-item"><div class="yr">2012</div><p>Licence L3 MSGR (Université d'Avignon) &amp; Diplôme de Formateur Sauveteur Secouriste du Travail SST (SOCOTEC)</p></div>
+        <div class="edu-item"><div class="yr">2011</div><p>Diplôme de Chef de Service Sécurité Incendie SSIAP 3 (SOCOTEC)</p></div>
+        <div class="edu-item"><div class="yr">2006</div><p>Master Comptabilité Contrôle Audit — IAE Caen</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="presse" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Presse</span>
+    <h2>En couverture</h2>
+    <div class="press">
+      <img src="assets/magazine-nouveau-manager-n44.jpg" alt="Sergio DOSSOU en couverture du magazine Le Nouveau Manager N°44">
+      <div>
+        <h3>Sergio S. G. DOSSOU en Une du magazine « Le Nouveau Manager » — N°44</h3>
+        <p>Portrait et parcours du Fondateur &amp; CEO d'IFECARM GROUP.</p>
+        <a class="btn btn-primary" href="assets/Le-Nouveau-Manager-N44.pdf" target="_blank" rel="noopener">Lire le magazine (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Cabinet</span>
+    <h2 style="margin-bottom:24px">IFECARM GROUP</h2>
+    <div class="ifecarm-block">
+      <img src="assets/logo_ring_ifecarm.png" alt="Logo IFECARM GROUP">
+      <div>
+        <h3>Cabinet de conseil QHSE international — Bénin &amp; France</h3>
+        <p>Fondé en 2022, IFECARM GROUP accompagne les organisations en Afrique et en Europe sur l'ingénierie QHSE, la formation, l'audit et la maîtrise des risques industriels sites ICPE/SEVESO. « Votre sécurité, notre priorité. »</p>
+        <div class="tag-group" style="margin-top:16px">
+          <span class="tag">Ingénierie</span>
+          <span class="tag">Formation — 426+ modules</span>
+          <span class="tag">Assistance-Conseil</span>
+          <span class="tag">Audit</span>
+          <span class="tag">RH &amp; Performance QHSE</span>
+          <span class="tag">Innovation &amp; Communication digitale</span>
+        </div>
+        <div class="tag-group">
+          <span class="tag">BTP</span><span class="tag">Agroalimentaire</span><span class="tag">Oil &amp; Gas</span>
+          <span class="tag">Santé</span><span class="tag">Mines</span><span class="tag">Tourisme</span>
+        </div>
+        <a class="btn btn-ghost" style="margin-top:14px" href="https://www.ifecarm-qhse.com" target="_blank" rel="noopener">Visiter ifecarm-qhse.com →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Équipe</span>
+    <h2>L'équipe IFECARM GROUP</h2>
+    <p class="lead">Une équipe pluridisciplinaire aux côtés de Sergio S. G. Dossou pour porter les missions QHSE en Afrique et en Europe.</p>
+    <div class="team-grid">
+      <div class="team-card"><img class="team-avatar" src="assets/team/tatiana-capo-chichi.jpg" alt="Tatiana Capo-Chichi"><h3>Tatiana Capo-Chichi</h3><p>Directrice Générale Afrique · Consulting Manager · Directrice Expertise-Conseils &amp; Audits</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/william-toihin.jpg" alt="William G. H. Toihin"><h3>William G. H. Toihin</h3><p>Directeur Ingénierie &amp; Formation · Ingénieur Électricité &amp; Énergie</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/kamelya-acka.jpg" alt="Kamelya Acka"><h3>Kamelya Acka</h3><p>Directrice Qualité, Stratégie &amp; Performance</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/belkais-drareni.jpeg" alt="Belkais Drareni"><h3>Belkais Drareni</h3><p>Directrice Stratégie · Système qualité, KPI &amp; amélioration continue</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/meriadeck-amoussou.jpg" alt="Mériadeck Amoussou"><h3>Mériadeck Amoussou</h3><p>Directeur Communication &amp; Marketing Digital / E-Commerce</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/nassiratou-salifou.jpg" alt="Nassiratou Salifou"><h3>Nassiratou Salifou</h3><p>Chargée de Projets Junior, Environnement Durable</p></div>
+      <div class="team-card"><img class="team-avatar" src="assets/team/juliette-amoussou.jpg" alt="Juliette Amoussouvi"><h3>Juliette Amoussouvi</h3><p>Secrétaire Administrative &amp; Pédagogique · Référente RSE</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Nos engagements</span>
+    <h2>Nos engagements au quotidien</h2>
+    <p class="lead">Huit principes guident nos décisions, nos collaborations et la qualité de nos interventions.</p>
+    <div class="values-grid">
+      <div class="value-card"><div class="vicon"><i class="bi bi-briefcase-fill"></i></div><h3>Professionnalisme</h3><p>Un standard qui ne varie pas selon la taille du client.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-award-fill"></i></div><h3>Leadership</h3><p>Montrer l'exemple avant de l'exiger.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-check2-square"></i></div><h3>Rigueur</h3><p>Vérifier deux fois ce qui ne doit être juste qu'une fois.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-fire"></i></div><h3>Passion</h3><p>Le métier qu'on choisirait encore.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-shield-fill-check"></i></div><h3>Intégrité</h3><p>Rester honnête quand un raccourci serait plus simple.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-lightbulb-fill"></i></div><h3>Innovation</h3><p>Chercher mieux, pas seulement différent.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-check-circle-fill"></i></div><h3>Responsabilité</h3><p>Répondre de nos actes, pas seulement de nos intentions.</p></div>
+      <div class="value-card"><div class="vicon"><i class="bi bi-emoji-smile-fill"></i></div><h3>Satisfaction client</h3><p>Écouter avant de proposer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rdv" class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Rendez-vous</span>
+    <h2>Planifier un échange</h2>
+    <p class="lead">Choisissez un créneau directement dans l'agenda ci-dessous.</p>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/houngbonestor80/30min" style="min-width:320px;height:700px"></div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <div style="color:#fff;font-weight:800;font-size:1.05rem;margin-bottom:10px">Sergio S. G. DOSSOU</div>
+      <p>QHSE Risk Manager &amp; Directeur de projets Risques Industriels<br>CEO &amp; Founder, IFECARM GROUP SARL</p>
+    </div>
+    <div>
+      <div style="color:#fff;font-weight:700;margin-bottom:10px">Bénin — siège</div>
+      <p><a href="tel:+2290191322470"><i class="ficon bi bi-telephone-fill"></i> (+229) 01 91 32 24 70</a></p>
+      <p><i class="ficon bi bi-geo-alt-fill"></i> Cotonou, Bénin</p>
+    </div>
+    <div>
+      <div style="color:#fff;font-weight:700;margin-bottom:10px">France — siège</div>
+      <p><a href="tel:+33767724368"><i class="ficon bi bi-telephone-fill"></i> (+33) 7 67 72 43 68</a></p>
+      <p><i class="ficon bi bi-geo-alt-fill"></i> 6 rue d'Armaillé, Paris</p>
+    </div>
+    <div>
+      <div style="color:#fff;font-weight:700;margin-bottom:10px">Contact</div>
+      <p><a href="mailto:dossousergio@yahoo.fr"><i class="ficon bi bi-envelope-fill"></i> dossousergio@yahoo.fr</a></p>
+      <p><a href="https://www.linkedin.com/in/sergio-dossou-91319883/" target="_blank" rel="noopener"><i class="ficon bi bi-linkedin"></i> LinkedIn</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Sergio S. G. DOSSOU — Fondateur &amp; CEO, IFECARM GROUP SARL</div>
+</footer>
+
+</body>
+</html>
